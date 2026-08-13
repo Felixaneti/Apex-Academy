@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apex Academy | Portal Login</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="portal-body">
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="logo"><a href="index.html" style="color:white; text-decoration:none;">Apex Academy</a></div>
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="admissions.html">Addmission</a></li>
+        <li><a href="portal.html" class="active portal-btn">Portal</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Portal Section -->
+  <section class="portal-container">
+    <div class="portal-card">
+      <div class="portal-header">
+        <h2>Apex Academy Portal</h2>
+        <p>Access grades, attendance, fee schedules, and school resources.</p>
+      </div>
+
+      <!-- Role Selector Tabs -->
+      <div class="role-tabs">
+        <button class="tab-btn active" data-tab="studentTab">Student Login</button>
+        <button class="tab-btn" data-tab="parentTab">Parent Login</button>
+      </div>
+
+      <!-- Student Form -->
+      <form class="portal-form active" id="studentForm">
+        <div class="form-group">
+          <label for="studentId">Student ID Number</label>
+          <input type="text" id="studentId" required placeholder="e.g. STU-2026-042">
+        </div>
+
+        <div class="form-group">
+          <label for="studentPassword">Password</label>
+          <div class="password-field">
+            <input type="password" id="studentPassword" required placeholder="••••••••">
+            <button type="button" class="toggle-password" data-target="studentPassword">Show</button>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <label class="remember-me">
+            <input type="checkbox" id="rememberStudent"> Remember ID
+          </label>
+          <a href="#" class="forgot-link">Forgot password?</a>
+        </div>
+
+        <button type="submit" class="btn portal-submit-btn">Sign In to Student Portal</button>
+        <div id="studentFeedback" class="form-feedback"></div>
+      </form>
+
+      <!-- Parent Form -->
+      <form class="portal-form" id="parentForm">
+        <div class="form-group">
+          <label for="parentEmailLog">Registered Email or Username</label>
+          <input type="email" id="parentEmailLog" required placeholder="parent@example.com">
+        </div>
+
+        <div class="form-group">
+          <label for="parentPassword">Password</label>
+          <div class="password-field">
+            <input type="password" id="parentPassword" required placeholder="••••••••">
+            <button type="button" class="toggle-password" data-target="parentPassword">Show</button>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <label class="remember-me">
+            <input type="checkbox" id="rememberParent"> Remember Login
+          </label>
+          <a href="#" class="forgot-link">Forgot password?</a>
+        </div>
+
+        <button type="submit" class="btn portal-submit-btn">Sign In to Parent Portal</button>
+        <div id="parentFeedback" class="form-feedback"></div>
+      </form>
+
+      <div class="portal-footer">
+        <p>Having trouble signing in? <a href="contact.html">Contact IT Helpdesk</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Apex Academy. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

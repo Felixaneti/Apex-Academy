@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apex Academy | Admissions Application</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="logo">Apex Academy</div>
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="admissions.html">Addmission</a></li>
+        <li><a href="portal.html" class="active portal-btn">Portal</a></li>
+        <!--<li><button id="openPortalModal" class="btn-portal-nav">Portal</button></li>-->
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Page Banner -->
+  <section class="page-banner">
+    <h1>Admissions Application</h1>
+    <p>Join the Apex Academy community for the upcoming 2026–2027 academic year.</p>
+  </section>
+
+  <!-- Admissions Information & Form -->
+  <section class="section">
+    <div class="admissions-container">
+      
+      <!-- Process Highlights -->
+      <div class="admissions-steps">
+        <h2>Application Steps</h2>
+        <div class="steps-grid">
+          <div class="step-card">
+            <span class="step-num">1</span>
+            <h4>Submit Form</h4>
+            <p>Fill out student, parent, and academic details below.</p>
+          </div>
+          <div class="step-card">
+            <span class="step-num">2</span>
+            <h4>Assessment</h4>
+            <p>Attend an online or on-campus evaluation session.</p>
+          </div>
+          <div class="step-card">
+            <span class="step-num">3</span>
+            <h4>Final Interview</h4>
+            <p>Meet with admissions counselors and school leadership.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Application Form -->
+      <form class="application-form" id="admissionsForm">
+        <h2>Student Admission Form</h2>
+        <p class="form-desc">Please complete all required fields (*). Ensure uploaded files are in PDF or JPG/PNG format.</p>
+
+        <!-- Section 1: Student Details -->
+        <fieldset class="form-section">
+          <legend>1. Student Personal Information</legend>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="studentFirstName">First Name *</label>
+              <input type="text" id="studentFirstName" required placeholder="First name">
+            </div>
+            <div class="form-group">
+              <label for="studentLastName">Last Name *</label>
+              <input type="text" id="studentLastName" required placeholder="Last name">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="dob">Date of Birth *</label>
+              <input type="date" id="dob" required>
+            </div>
+            <div class="form-group">
+              <label for="gender">Gender *</label>
+              <select id="gender" required>
+                <option value="" disabled selected>Select gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other / Prefer not to say</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="gradeApplying">Applying for Grade/Class *</label>
+              <select id="gradeApplying" required>
+                <option value="" disabled selected>Select grade</option>
+                <option value="kindergarten">Kindergarten</option>
+                <option value="elementary">Elementary (Grades 1-5)</option>
+                <option value="middle">Middle School (Grades 6-8)</option>
+                <option value="high">High School (Grades 9-12)</option>
+              </select>
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- Section 2: Parent / Guardian Information -->
+        <fieldset class="form-section">
+          <legend>2. Parent / Guardian Details</legend>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="parentName">Full Name *</label>
+              <input type="text" id="parentName" required placeholder="Parent/Guardian name">
+            </div>
+            <div class="form-group">
+              <label for="relationship">Relationship to Student *</label>
+              <input type="text" id="relationship" required placeholder="e.g. Father, Mother, Guardian">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="parentEmail">Email Address *</label>
+              <input type="email" id="parentEmail" required placeholder="parent@example.com">
+            </div>
+            <div class="form-group">
+              <label for="parentPhone">Phone Number *</label>
+              <input type="tel" id="parentPhone" required placeholder="+1 (555) 000-0000">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="residentialAddress">Residential Address *</label>
+            <textarea id="residentialAddress" rows="2" required placeholder="Street address, City, State, ZIP"></textarea>
+          </div>
+        </fieldset>
+
+        <!-- Section 3: Academic History -->
+        <fieldset class="form-section">
+          <legend>3. Previous Academic Details</legend>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="previousSchool">Name of Last School Attended</label>
+              <input type="text" id="previousSchool" placeholder="School name">
+            </div>
+            <div class="form-group">
+              <label for="lastGradeCompleted">Last Grade Completed</label>
+              <input type="text" id="lastGradeCompleted" placeholder="e.g. Grade 7">
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- Section 4: Document Uploads -->
+        <fieldset class="form-section">
+          <legend>4. Required Documents</legend>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="birthCertificate">Birth Certificate (PDF/JPG, Max 5MB) *</label>
+              <input type="file" id="birthCertificate" accept=".pdf, .jpg, .jpeg, .png" required>
+            </div>
+            <div class="form-group">
+              <label for="reportCard">Latest Academic Transcripts/Report Card (PDF) *</label>
+              <input type="file" id="reportCard" accept=".pdf, .jpg, .jpeg, .png" required>
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- Section 5: Declaration -->
+        <div class="form-group checkbox-group">
+          <input type="checkbox" id="declaration" required>
+          <label for="declaration">I confirm that all information provided in this application is accurate and complete to the best of my knowledge. *</label>
+        </div>
+
+        <button type="submit" class="btn btn-submit">Submit Application</button>
+        <div id="admissionsFeedback" class="form-feedback"></div>
+      </form>
+
+    </div>
+  </section>
+
+  
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Apex Academy. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
